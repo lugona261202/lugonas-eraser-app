@@ -56,14 +56,14 @@ function Editor({onSaveTrigger,fileId,fileData}:{onSaveTrigger:any,fileId:any,fi
 
             tools:{
                 header: {
-                    class: Header,
+                    class: Header as unknown as ToolConstructable,
                     shortcut: 'CMD+SHIFT+H',
                     config:{
                         placeholder:'Enter a Header'
                     }
                   },
                   list: {
-                    class: List ,
+                    class: List as unknown as ToolConstructable,
                     inlineToolbar: true,
                     config: {
                       defaultStyle: 'unordered'
